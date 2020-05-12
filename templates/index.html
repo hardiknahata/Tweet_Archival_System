@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Tweet Archival System{% endblock %}
+{% block head %}
+  {{ super() }}
+  <h1>Tweet Archival System</h1>
+{% endblock %}
+{% block content %}
+
+<form method="POST" action="">
+    {{ form.csrf_token }}
+    {{ form.query.label }}
+    {{ form.query }}
+    <input type="submit" value="Search">
+
+    <br><br>
+    <p>
+        {% for i in tweet_results %}
+            <li>  {{  tweet_results[i] }} </li>
+            <br>
+        {% endfor %}
+    </p>
+    
+</form>
+{% endblock %}
