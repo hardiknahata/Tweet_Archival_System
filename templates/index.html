@@ -7,14 +7,14 @@
 {% block content %}
 
 <form method="POST" action="">
-    {{ form.csrf_token }}
-    {{ form.query.label }}
-    {{ form.query }}
-    <input type="submit" value="Search">
+    {{ form.csrf_token }}   #The CSRF package checks against cross-site request forgery (“csrf”).
+    {{ form.query.label }}  #Renders the query label
+    {{ form.query }}        #Renders the query field
+    <input type="submit" value="Search"> 
 
     <br><br>
     <p>
-        {% for i in tweet_results %}
+        {% for i in tweet_results %}            #Printing the tweets from tweet_results dict
             <li>  {{  tweet_results[i] }} </li>
             <br>
         {% endfor %}
