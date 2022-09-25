@@ -1,6 +1,6 @@
 # Tweet Archival System
 
-This is a Flask Application which is served on the Google App Engine. The best part about App Engine is that it takes care of the server envoronment and lets us concentrate on just code.
+This is a Flask Application.
 
 So the main.py file instantiates the Flask object which renders the Form (powered by Flask_WTF) to the webpage. The HTML file is placed in the templates folder, and the optional CSS,JS files are placed in the Static folder.
 
